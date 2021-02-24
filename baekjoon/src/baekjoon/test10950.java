@@ -23,6 +23,7 @@ public class test10950  {
 			sb.append(a+b).append("\n");
 			
 		}
+		
 		System.out.println(sb);
 	}
 }
