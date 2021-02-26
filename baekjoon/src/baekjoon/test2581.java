@@ -17,7 +17,7 @@ public class test2581  {
 		int sum = 0;
 		ArrayList<Integer> min = new ArrayList<Integer>(); 
 		if (M <= N) {
-			for (int i = M;i<N; i++) {
+			for (int i = M;i<=N; i++) {
 				boolean result = isPrimeNumber(i);
 				if (result) {
 					sum += i;
