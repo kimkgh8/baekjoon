@@ -7,6 +7,7 @@ import java.io.IOException;
  
 public class test1929 {
 	public static void main(String[] args) throws IOException {
+		long start = System.currentTimeMillis();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 		int M = Integer.parseInt(st.nextToken());
@@ -21,6 +22,8 @@ public class test1929 {
 			}
 		}
 		System.out.println(sb);
+		long end = System.currentTimeMillis();
+		System.out.println("실행시간 : " + (end - start)/1000.0);
 	}
 	
 	public static boolean isPrimeNumber(int number) {
