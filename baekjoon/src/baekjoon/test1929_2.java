@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.io.IOException;
  
-public class test1930_2 {
+public class test1929_2 {
 	public static boolean[] prime;
 	
 	public static void main(String[] args) throws IOException {

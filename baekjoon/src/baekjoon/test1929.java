@@ -14,16 +14,25 @@ public class test1929 {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		for (int i=M;i*i<=N;i++) {
-			while (N % i == 0) {
+		for (int i=M;i<N;i++) {
+			boolean result = isPrimeNumber(i);
+			if (result) {
 				sb.append(i).append("\n");
-				N /= i;
 			}
-		}
-		if (N != 1) {
-			sb.append(N);
 		}
 		System.out.println(sb);
 	}
+	
+	public static boolean isPrimeNumber(int number) {
+		if (number == 1) {
+			return false;
+		}
+		for (int i=2;i<number;i++) {
+			if (number % i == 0 ) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
- 
+ 	
