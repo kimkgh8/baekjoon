@@ -49,7 +49,7 @@ public class test2447 {
 			for (int j = y; j < y + N; j += size) {
 				count++;
 				if (count == 5) { // 공백 칸일 경우
-		star(i, j, size, true);
+					star(i, j, size, true);
 				} else {
 					star(i, j, size, false);
 				}
