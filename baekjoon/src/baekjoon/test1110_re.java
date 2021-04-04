@@ -12,6 +12,9 @@ public class test1110_re {
     	String n = br.readLine();
     	int cnt = 0;
     	int sum = 0;
+    	if (n.length() == 1) {
+    		n = 0 +n;
+    	}
     	String newN = n;
     	while (true) {
     		cnt++;
