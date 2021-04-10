@@ -32,15 +32,33 @@ public class test1018_re {
 		
 		for (int i=0;i<n_row;i++) {
 			for (int j=0;j<m_col;j++) {
-				//메소드
+				find(i,j);
 			}
 		}
 		System.out.println(min);
 	}
 	
 	public static void find(int x, int y) {
+		int end_x = x + 8;
+		int end_y = y + 8;
+		int count = 0;
 		
+		boolean TF = arr[x][y];
 		
+		for (int i=x;i<end_x;i++) {
+			for (int j=y;j<end_y;j++) {
+				if (arr[i][j] != TF) {
+					count++;
+				}
+				
+				TF = (!TF);
+			}
+		}
+		TF = !TF;
+		
+		count = Math.min(count, 64 - count);
+		
+		min = Math.min(min, count);
 	}
 
 }
