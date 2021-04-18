@@ -8,6 +8,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.TreeSet;
 
+//백준의 컴파일결과 에러.
+//원인 조사 및 해결 필요
 public class test1181_re {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,6 +21,7 @@ public class test1181_re {
 			arr.add(br.readLine());
 		}
 		ArrayList<String> sortedArr = new ArrayList<String>(arr);
+		
 		Collections.sort(sortedArr, new Comparator<String>() {
 			public int compare(String e1, String e2) {
 				if (e1.length() < e2.length()) {
