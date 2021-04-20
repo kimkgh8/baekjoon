@@ -24,9 +24,15 @@ public class test10814_re2 {
 		Arrays.sort(arr, new Comparator<String[]>() {
 			@Override
 			public int compare(String[] e1, String[] e2) {
-				
+				System.out.println(Integer.parseInt(e1[0]) - Integer.parseInt(e2[0]));
+				return Integer.parseInt(e1[0]) - Integer.parseInt(e2[0]);
 			}
 		});
 		
+		StringBuilder sb = new StringBuilder();
+		for (int i=0;i<N;i++) {
+			sb.append(arr[i][0] + " " + arr[i][1]).append('\n');
+		}
+		System.out.println(sb);
 	}
 }
