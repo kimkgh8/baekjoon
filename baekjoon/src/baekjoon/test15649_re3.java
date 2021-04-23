@@ -20,13 +20,17 @@ public class test15649_re3 {
 		int M = Integer.parseInt(st.nextToken());
 	
 		arr = new int[M];
+		
 		visit = new boolean[N];
+		
 		dfs(N,M,0);
+		
 		System.out.println(sb);
+		
 	}
 	
 	public static void dfs(int N, int M, int depth) {
-		if (depth ==M) {
+		if (depth == M) {
 			for (int val:arr) {
 				sb.append(val).append(' ');
 			}
