@@ -18,15 +18,11 @@ public class test15649_re3 {
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
-	
+		
 		arr = new int[M];
-		
 		visit = new boolean[N];
-		
 		dfs(N,M,0);
-		
 		System.out.println(sb);
-		
 	}
 	
 	public static void dfs(int N, int M, int depth) {
@@ -35,16 +31,19 @@ public class test15649_re3 {
 				sb.append(val).append(' ');
 			}
 			sb.append('\n');
-			return;
-		}	
+		}
 		for (int i=0;i<N;i++) {
 			if (!visit[i]) {
 				visit[i] = true;
 				arr[depth] = i+1;
-				dfs(N,M,depth +1);
+				dfs(N,M,depth+1);
 				visit[i] = false;
+				
+				
 			}
 		}
+		
+		
 	}
 	
 }
