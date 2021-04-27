@@ -8,20 +8,22 @@ import java.util.StringTokenizer;
 public class test10870_re {
  
 	public static void main(String[] args) throws IOException {
-		 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n =Integer.parseInt(br.readLine());
 		
-		int N = Integer.parseInt(br.readLine());
-		
-		int sum = fibonacci(N);
+		int sum = fibonacci(n);
 		System.out.println(sum);
-		
 	}
 	
-	public static int fibonacci(int N) {
-		if(N == 0) return 0;	
-		if(N == 1) return 1;
-		return fibonacci(N - 1) + fibonacci(N - 2);		
+	public static int fibonacci(int n) {
+		if (n == 0) {
+			return 0;
+		}
+		if (n == 1) {
+			return 1;
+		}
+		return fibonacci(n-1) + fibonacci(n-2);
 	}
- 
+		 
+		
 }
