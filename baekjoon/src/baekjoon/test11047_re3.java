@@ -8,7 +8,8 @@ import java.util.StringTokenizer;
 public class test11047_re3 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 		
@@ -19,14 +20,17 @@ public class test11047_re3 {
 		}
 		
 		int cnt = 0;
-		
+		StringBuilder sb = new StringBuilder();
 		for (int i=N-1;i>=0;i--) {
-			if (arr[i] <= K) {
-				cnt += (K / arr[i]);
+			if (arr[i]<=K) {
+				cnt += (K/arr[i]);
+				sb.append(cnt).append(" ");
 				K = K % arr[i];
 			}
 		}
 		System.out.println(cnt);
+		
+		System.out.println("cnt값변화:"+ sb);
 	}
 	
 }
