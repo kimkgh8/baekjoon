@@ -10,12 +10,8 @@ import java.util.StringTokenizer;
 public class test1931 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
 		int N = Integer.parseInt(br.readLine());
 
-		/*
-		 * time[][0] 은 시작시점을 의미 time[][1] 은 종료시점을 의미
-		 */
 		int[][] time = new int[N][2];
 
 		StringTokenizer st;
@@ -26,7 +22,6 @@ public class test1931 {
 			time[i][1] = Integer.parseInt(st.nextToken()); // 종료시간
 		}
 
-		// 끝나는 시간을 기준으로 정렬하기 위해 compare 재정의
 		Arrays.sort(time, new Comparator<int[]>() {
 
 			@Override
