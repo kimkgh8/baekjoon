@@ -9,28 +9,23 @@ public class test11047_re3 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-		
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 		
 		int[] arr = new int[N];
 		
-		for (int i=0;i<N;i++) {
+		for (int i=0;i<N;i++) { 
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
 		int cnt = 0;
-		StringBuilder sb = new StringBuilder();
-		for (int i=N-1;i>=0;i--) {
-			if (arr[i]<=K) {
-				cnt += (K/arr[i]);
-				sb.append(cnt).append(" ");
+		for (int i=N-1;i>0;i--) {
+			if (arr[i] <= K) {
+				cnt += (K/ arr[i]);
 				K = K % arr[i];
 			}
 		}
 		System.out.println(cnt);
-		
-		System.out.println("cnt값변화:"+ sb);
 	}
 	
 }
