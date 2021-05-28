@@ -16,7 +16,7 @@ public class test1037 {
     	
     	int max = Integer.MIN_VALUE;
     	int min = Integer.MAX_VALUE;
-    	
+    	System.out.println(max);
     	while (cntN-- > 0) {
     		int N = Integer.parseInt(st.nextToken());
     		max = N > max ? N:max;
