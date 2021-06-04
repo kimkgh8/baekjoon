@@ -46,7 +46,7 @@ public class test10828 {
 	
 	public static void pop(LinkedList<Integer> arr) {
 		if (arr.size() == 0) {
-			sb.append("-1");
+			sb.append("-1").append("\r\n");
 		} else {
 			boolean firstEx = true;
 			for (int i:arr) {
@@ -54,28 +54,27 @@ public class test10828 {
 					firstEx = false;
 					continue;
 				}
-				sb.append(i);
+				sb.append(i).append("\r\n");
 			}
-			sb.append(false);
 		}
 	}
 	
 	public static void size(LinkedList<Integer> arr) {
-		sb.append(arr.size());
+		sb.append(arr.size()).append("\r\n");
 	}
 	
 	public static void empty(LinkedList<Integer> arr) {
 		if (arr.size() == 0) {
-			sb.append(1);
+			sb.append(1).append("\r\n");
 		} else {
-			sb.append(0);
+			sb.append(0).append("\r\n");
 		}
 	}
 	public static void top(LinkedList<Integer> arr) {
 		boolean firstEx = true;
 		for (int i:arr) {
 			if (firstEx) {
-				sb.append(i);
+				sb.append(i).append("\r\n");
 				firstEx = false;
 				break;
 			}
