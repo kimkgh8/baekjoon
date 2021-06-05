@@ -71,14 +71,7 @@ public class test10828 {
 		}
 	}
 	public static void top(LinkedList<Integer> arr) {
-		boolean firstEx = true;
-		for (int i:arr) {
-			if (firstEx) {
-				sb.append(i).append("\r\n");
-				firstEx = false;
-				break;
-			}
-		}
+		sb.append(arr.getLast()).append("\r\n");
 	}	
 }
  
