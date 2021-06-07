@@ -48,14 +48,9 @@ public class test10828 {
 		if (arr.size() == 0) {
 			sb.append("-1").append("\r\n");
 		} else {
-			boolean firstEx = true;
-			for (int i:arr) {
-				if (firstEx) {
-					firstEx = false;
-					continue;
-				}
-				sb.append(i).append("\r\n");
-			}
+			int topNumber = arr.getLast();
+			sb.append(topNumber).append("\r\n");
+			arr.remove(arr.getLast());
 		}
 	}
 	
