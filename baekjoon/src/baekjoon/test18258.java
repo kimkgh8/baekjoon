@@ -31,8 +31,11 @@ public class test18258 {
 			if (comand.equals("empty")) {
 				empty(arr);
 			}
-			if (comand.equals("top")) {
-				top(arr);
+			if (comand.equals("front")) {
+				front(arr);
+			}
+			if (comand.equals("back")) {
+				back(arr);
 			}
 		}
 		
@@ -65,8 +68,20 @@ public class test18258 {
 			sb.append(0).append("\r\n");
 		}
 	}
-	public static void top(LinkedList<Integer> arr) {
-		sb.append(arr.getFirst()).append("\r\n");
+	public static void front(LinkedList<Integer> arr) {
+		if (arr.size() == 0) {
+			sb.append("-1").append("\r\n");
+		} else {
+			sb.append(arr.getFirst()).append("\r\n");
+		}
+		
+	}	
+	public static void back(LinkedList<Integer> arr) {
+		if (arr.size() == 0) {
+			sb.append("-1").append("\r\n");
+		} else {
+			sb.append(arr.getLast()).append("\r\n");
+		}
 	}	
 }
  
